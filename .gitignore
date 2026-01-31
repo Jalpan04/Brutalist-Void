@@ -1,0 +1,17 @@
+# Binaries
+*.exe
+*.dll
+*.o
+bin/
+obj/
+
+# Visual Studio Code
+.vscode/
+
+# System
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+recording.mp4
