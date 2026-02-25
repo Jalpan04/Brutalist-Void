@@ -153,7 +153,7 @@ void main()
         vec3 lighting = ambient + diffuse + specular;
         result = albedo * lighting;
 
-        fogColor = vec3(0.2, 0.2, 0.2); // Light grey mist
+        fogColor = vec3(0.1, 0.1, 0.1); // Darker grey mist
         fogCoeff = 0.008; // Atmospheric Haze
     }
     

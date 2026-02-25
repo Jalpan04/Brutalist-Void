@@ -1,9 +1,12 @@
 # Binaries
 *.exe
+!bin/brutalist_void.exe
 *.dll
 *.o
-bin/
 obj/
+
+# Ignore curious standalone demo completely
+curious/
 
 # Visual Studio Code
 .vscode/

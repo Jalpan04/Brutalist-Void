@@ -275,14 +275,22 @@ void UpdatePlayer(Player *player,
 int main() {
   // 1. Initialization
   InitWindow(1280, 720, "Brutalist Void - Procedural Infinite Architecture");
+
+  // Force working directory to the parent of the folder containing the
+  // executable This ensures double-clicking the .exe in 'bin' finds the assets
+  // in the root folder.
+  const char *appDir = GetApplicationDirectory();
+  ChangeDirectory(appDir);
+  ChangeDirectory(".."); // Move up from 'bin' to the main project root
+
   InitAudioDevice();
   SetTargetFPS(60);
   DisableCursor();
 
-  // 2. Audio Setup
-  AudioStream voidHum = LoadAudioStream(44100, 16, 1);
-  SetAudioStreamCallback(voidHum, NoiseCallback);
-  PlayAudioStream(voidHum);
+  // 2. Audio Setup (Removed per user request)
+  // AudioStream voidHum = LoadAudioStream(44100, 16, 1);
+  // SetAudioStreamCallback(voidHum, NoiseCallback);
+  // PlayAudioStream(voidHum);
 
   // 3. Player/Camera Setup
   Player player = {0};
@@ -440,7 +448,7 @@ int main() {
           (Color){13, 13, 15, 255}); // Match Creepy Fog (Deep dark blue-grey)
     } else {
       ClearBackground(
-          (Color){51, 51, 51, 255}); // Match Liminal Fog (Medium Grey)
+          (Color){25, 25, 25, 255}); // Match Liminal Fog (Darker Grey)
     }
 
     BeginMode3D(player.camera);
@@ -483,8 +491,8 @@ int main() {
   for (auto &c : chunks)
     c.Unload();
   UnloadShader(concreteShader);
-  UnloadAudioStream(voidHum);
-  CloseAudioDevice();
+  // UnloadAudioStream(voidHum);
+  // CloseAudioDevice();
   CloseWindow();
 
   return 0;
