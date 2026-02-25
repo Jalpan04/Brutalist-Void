@@ -2,7 +2,6 @@
 
 An infinite, procedurally generated brutalist city exploration experience.
 
-## Description
 This project simulates an endless walk through a megastructure composed of massive concrete slabs, pillars, and citadels. It emphasizes atmosphere, scale, and the liminal horror of empty architectural spaces. The engine generates architecture dynamically as the player moves, providing a continuous unbroken experience of urban desolation.
 
 ![Brutalist Void Showcase 1](image.png)
