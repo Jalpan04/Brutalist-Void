@@ -1,5 +1,7 @@
 # The Brutalist Void
 
+![GitHub top language](https://img.shields.io/github/languages/top/Jalpan04/Brutalist-Void) ![GitHub repo size](https://img.shields.io/github/repo-size/Jalpan04/Brutalist-Void) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+
 An infinite, procedurally generated brutalist city exploration experience.
 
 This project simulates an endless walk through a megastructure composed of massive concrete slabs, pillars, and citadels. It emphasizes atmosphere, scale, and the liminal horror of empty architectural spaces. The engine generates architecture dynamically as the player moves, providing a continuous unbroken experience of urban desolation.
